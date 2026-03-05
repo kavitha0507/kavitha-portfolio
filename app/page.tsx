@@ -43,7 +43,14 @@ export default function Home() {
     tags: ["Next.js", "Tailwind CSS", "Full-Stack"],
     type: "Engineering",
     link: "/projects/chess-coaching"
-  }
+  },
+{
+  title: "Professional Brand Platform",
+  description: "A high-performance portfolio developed to showcase UI/UX case studies and technical expertise.",
+  tags: ["Next.js", "Tailwind CSS", "Vercel", "Figma"],
+  type: "Web Development / UX Design",
+  link: "/" // Since it's the current site
+}
 ];
 
   const copyEmail = () => {
