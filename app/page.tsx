@@ -246,6 +246,19 @@ API & Database Integration
       </div>
     </div>
   </div>
+  {/* NGO 3: DevLaunchers */}
+      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+        <div className="text-3xl">⚙️</div>
+        <div>
+          <h3 className="text-xl font-bold text-slate-900">DevLaunchers</h3>
+          <p className="text-blue-600 font-bold text-sm mb-2">Design System Engineer</p>
+          <p className="text-slate-500 text-sm">
+            Contributing to the development and maintenance of scalable design systems, bridging the gap between design tokens and component implementation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 {/* --- Hire Me / CTA Section --- */}
 
