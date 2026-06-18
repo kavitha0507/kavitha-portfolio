@@ -49,23 +49,59 @@ export default function MedicationReminder() {
   <h2 className="text-2xl font-bold border-b-2 border-blue-200 pb-2">Design Process</h2>
   <p className="text-lg">Following the Google UX methodology, I created user personas for retirees and performed usability testing to refine the notification system.</p>
         
-  {/* REPLACE THE DASHED BOX WITH THIS: */}
-  <div className="relative w-full h-48 bg-gradient-to-br from-blue-600/10 to-indigo-600/20 rounded-t-2xl flex items-center justify-center overflow-hidden border-b border-white/5 dynamic-card-glow">
-    {/* Blurred neon background accent ring */}
-    <div className="absolute w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
+  {/* Low-fidelity Prototype Section */}
+  <div className="space-y-4">
+    <h3 className="text-xl font-bold text-blue-800">Low-fidelity Prototype</h3>
+    <p className="text-slate-600">
+      This prototype shows the basic user flow from opening the app, adding a new medicine reminder, and receiving notification alerts.
+    </p>
+    <a 
+      href="https://www.figma.com/design/j6aATVdeNPrejhnTsAlHQc/Medication-Reminder-UX-Research?node-id=5-12&t=7MtC40IUNhjvYh7L-1"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block text-blue-600 hover:text-blue-800 font-medium underline"
+    >
+      View Figma Prototype →
+    </a>
     
-    {/* Premium medical icon */}
-    <div className="relative z-10 flex flex-col items-center">
-      <svg className="text-blue-400 w-12 h-12 stroke-[1.5] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-        <circle cx="12" cy="12" r="4"/>
-      </svg>
-      
-      {/* Mini dashboard mock row */}
-      <div className="flex gap-1 absolute bottom-3 left-3 right-3">
-        <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">8:00 AM</div>
-        <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">Reminder Active</div>
-        <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">Adherence: 98%</div>
+    {/* Glassmorphic placeholder for Lofi */}
+    <div className="relative w-full h-48 bg-gradient-to-br from-blue-600/10 to-indigo-600/20 rounded-t-2xl flex items-center justify-center overflow-hidden border-b border-white/5">
+      <div className="absolute w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
+      <div className="relative z-10 flex flex-col items-center">
+        <svg className="text-blue-400 w-12 h-12 stroke-[1.5] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <line x1="3" y1="9" x2="21" y2="9"/>
+          <line x1="9" y1="21" x2="9" y2="9"/>
+        </svg>
+        <div className="flex gap-1 absolute bottom-3 left-3 right-3">
+          <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">Flow 1</div>
+          <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">Add Medicine</div>
+          <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">Reminder</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* High-fidelity Prototype Section */}
+  <div className="space-y-4 mt-12">
+    <h3 className="text-xl font-bold text-blue-800">High-fidelity Prototype</h3>
+    <p className="text-slate-600">
+      The final design with polished UI, accessibility features, and interactive elements.
+    </p>
+    
+    {/* Glassmorphic placeholder for Hifi */}
+    <div className="relative w-full h-48 bg-gradient-to-br from-purple-600/10 to-indigo-600/20 rounded-t-2xl flex items-center justify-center overflow-hidden border-b border-white/5">
+      <div className="absolute w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+      <div className="relative z-10 flex flex-col items-center">
+        <svg className="text-purple-400 w-12 h-12 stroke-[1.5] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          <circle cx="12" cy="12" r="4"/>
+        </svg>
+        <div className="flex gap-1 absolute bottom-3 left-3 right-3">
+          <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-purple-300">Polished UI</div>
+          <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-purple-300">WCAG AA</div>
+          <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-purple-300">Interactive</div>
+        </div>
       </div>
     </div>
   </div>
