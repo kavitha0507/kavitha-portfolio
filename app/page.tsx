@@ -68,18 +68,24 @@ export default function Home() {
   };
 
   return (
-    <main>
-      <nav className="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-slate-200 px-10 py-4 flex justify-between items-center">
-<h1 className="text-xl font-black text-blue-600 tracking-tighter">KAVITHA.</h1>
-<div className="hidden md:flex space-x-8 text-sm font-bold text-slate-600">
-<Link href="/projects" className="hover:text-indigo-600">Projects</Link>
-<Link href="/about" className="hover:text-indigo-600">About</Link>
+    <main className="bg-[#0B0F19] text-gray-100 selection:bg-purple-500/30 min-h-screen">
+      {/* Glow Elements */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-indigo-600/10 to-purple-600/10 blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-bl from-purple-600/10 to-indigo-600/10 blur-3xl"></div>
+      </div>
+
+      <nav className="sticky top-0 z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/[0.05] px-10 py-4 flex justify-between items-center">
+<h1 className="text-xl font-black text-purple-400 tracking-tighter">KAVITHA.</h1>
+<div className="hidden md:flex space-x-8 text-sm font-bold text-gray-300">
+<Link href="/projects" className="hover:text-purple-400 transition-all ease-in-out duration-300">Projects</Link>
+<Link href="/about" className="hover:text-purple-400 transition-all ease-in-out duration-300">About</Link>
 
 {/* Resume Download Button */}
   <a 
    href="/Kavitha_Mynala_Resume.pdf" 
   download="Kavitha_Mynala_Resume.pdf"
-    className="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-all shadow-md"
+    className="bg-purple-600/20 border border-purple-500/30 text-purple-300 px-5 py-2 rounded-full hover:bg-purple-500/30 transition-all ease-in-out duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]"
   >
     Download Resume
   </a>
@@ -87,82 +93,90 @@ export default function Home() {
 
 </nav>
 
-<section className="flex flex-col items-center justify-center py-24 text-center">
-<div className="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-xs font-bold mb-6 tracking-widest uppercase">
+<section className="flex flex-col items-center justify-center py-24 text-center relative">
+<div className="bg-purple-500/10 border border-purple-500/20 text-purple-300 px-4 py-1 rounded-full text-xs font-bold mb-6 tracking-widest uppercase backdrop-blur-sm">
 UI/UX Designer & Developer
 </div>
 
-<h1 className="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none">
+<h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none">
 Design that <br />
-<span className="text-purple-600">works.</span>
+<span className="text-purple-400">works.</span>
 </h1>
 
-<p className="mt-8 text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+<p className="mt-8 text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
 I am Kavitha. I specialize in bridging the gap between complex Agentic AI systems, full-stack product engineering, and trusted user experiences. From building scalable design systems to engineering full-stack applications and human-in-the-loop interfaces, I transform technical capability into market-ready solutions.
 </p>
 
 {/* NEW SKILLS TAGS */}
 
 <div className="mt-10 flex flex-wrap justify-center gap-3">
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">AI/UX Product Strategy</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Design System Engineering</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Full-Stack Development (Java/Python)</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Next.js & React</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Human-in-the-Loop UX</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Trust-by-Design Architecture</span>
+<span className="bg-white/[0.02] border border-white/[0.05] px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:bg-purple-500/20 transition-all ease-in-out duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">AI/UX Product Strategy</span>
+<span className="bg-white/[0.02] border border-white/[0.05] px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:bg-purple-500/20 transition-all ease-in-out duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">Design System Engineering</span>
+<span className="bg-white/[0.02] border border-white/[0.05] px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:bg-purple-500/20 transition-all ease-in-out duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">Full-Stack Development (Java/Python)</span>
+<span className="bg-white/[0.02] border border-white/[0.05] px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:bg-purple-500/20 transition-all ease-in-out duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">Next.js & React</span>
+<span className="bg-white/[0.02] border border-white/[0.05] px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:bg-purple-500/20 transition-all ease-in-out duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">Human-in-the-Loop UX</span>
+<span className="bg-white/[0.02] border border-white/[0.05] px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:bg-purple-500/20 transition-all ease-in-out duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">Trust-by-Design Architecture</span>
 </div>
 </section>
 
-<section className="max-w-6xl mx-auto px-6 py-20">
-<h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Featured Projects</h2>
+<section className="max-w-6xl mx-auto px-6 py-20 relative">
+<h2 className="text-3xl md:text-4xl font-bold mb-12 text-white">Featured Engineering & Design Artifacts</h2>
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-  {projects.map((project, index) => (
+  {projects.map((project, index) => {
+    const colorThemes: Record<string, string> = {
+      'AI & Development': 'border-indigo-500/30 bg-indigo-500/10 text-indigo-300',
+      'Full-Stack Development': 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300',
+      'Computer Vision': 'border-amber-500/30 bg-amber-500/10 text-amber-300',
+      'Web Development': 'border-purple-500/30 bg-purple-500/10 text-purple-300'
+    };
+    const theme = colorThemes[project.type] || 'border-purple-500/30 bg-purple-500/10 text-purple-300';
+    
+    return (
     <div
       key={index}
-      className="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+      className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-8 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]"
     >
-      {/* project content */}
-      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-      <p className="text-sm font-semibold text-slate-500 mb-2">{project.role}</p>
-      <p className="text-slate-500 mb-4">{project.description}</p>
+      <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+      <p className="text-sm font-semibold text-purple-400 mb-2">{project.role}</p>
+      <p className="text-gray-400 mb-4">{project.description}</p>
       <div className="flex flex-wrap gap-2">
         {project.tags.map((tag, i) => (
           <span
             key={i}
-            className="text-xs bg-gray-100 px-2 py-1 rounded"
+            className={`text-xs px-3 py-1 rounded-full border ${theme}`}
           >
             {tag}
           </span>
         ))}
       </div>
     </div>
-  ))}
+  )})}
 </div>
 </section>
 
-<section id="process" className="max-w-6xl mx-auto px-10 py-24">
-<h2 className="text-3xl font-bold text-slate-900 mb-12">My Design Process</h2>
+<section id="process" className="max-w-6xl mx-auto px-10 py-24 relative">
+<h2 className="text-3xl font-bold text-white mb-12">My Design Process</h2>
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
   {/* PHASE 1: DISCOVER */}
 
-<div className="group bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-<div className="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+<div className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-8 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
+<div className="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 border border-purple-500/30">
 <span className="text-2xl">🔍</span>
 </div>
-<h3 className="text-xl font-extrabold text-slate-900 mb-4">01. Discovery</h3>
-<ul className="text-slate-500 text-sm space-y-3">
+<h3 className="text-xl font-extrabold text-white mb-4">01. Discovery</h3>
+<ul className="text-gray-400 text-sm space-y-3">
 <li className="flex items-start gap-2">
-<span className="text-purple-600 font-bold">•</span>
+<span className="text-purple-400 font-bold">•</span>
 Stakeholder Interviews
 </li>
 <li className="flex items-start gap-2">
-<span className="text-purple-600 font-bold">•</span>
+<span className="text-purple-400 font-bold">•</span>
 User Persona Creation
 </li>
 <li className="flex items-start gap-2">
-<span className="text-purple-600 font-bold">•</span>
+<span className="text-purple-400 font-bold">•</span>
 Competitive Audit
 </li>
 </ul>
@@ -170,22 +184,22 @@ Competitive Audit
 
 {/* PHASE 2: DESIGN */}
 
-<div className="group bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-<div className="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center mb-6">
+<div className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-8 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
+<div className="w-12 h-12 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-6 border border-pink-500/30">
 <span className="text-2xl">🎨</span>
 </div>
-<h3 className="text-xl font-extrabold text-slate-900 mb-4">02. Visual UI</h3>
-<ul className="text-slate-500 text-sm space-y-3">
+<h3 className="text-xl font-extrabold text-white mb-4">02. Visual UI</h3>
+<ul className="text-gray-400 text-sm space-y-3">
 <li className="flex items-start gap-2">
-<span className="text-pink-600 font-bold">•</span>
+<span className="text-pink-400 font-bold">•</span>
 High-Fidelity Wireframes
 </li>
 <li className="flex items-start gap-2">
-<span className="text-pink-600 font-bold">•</span>
+<span className="text-pink-400 font-bold">•</span>
 Design Systems (Figma)
 </li>
 <li className="flex items-start gap-2">
-<span className="text-pink-600 font-bold">•</span>
+<span className="text-pink-400 font-bold">•</span>
 Interactive Prototyping
 </li>
 </ul>
@@ -193,22 +207,22 @@ Interactive Prototyping
 
 {/* PHASE 3: BUILD */}
 
-<div className="group bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-<div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+<div className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-8 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
+<div className="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/30">
 <span className="text-2xl">💻</span>
 </div>
-<h3 className="text-xl font-extrabold text-slate-900 mb-4">03. Development</h3>
-<ul className="text-slate-500 text-sm space-y-3">
+<h3 className="text-xl font-extrabold text-white mb-4">03. Development</h3>
+<ul className="text-gray-400 text-sm space-y-3">
 <li className="flex items-start gap-2">
-<span className="text-blue-600 font-bold">•</span>
+<span className="text-blue-400 font-bold">•</span>
 Clean Next.js Codebase
 </li>
 <li className="flex items-start gap-2">
-<span className="text-blue-600 font-bold">•</span>
+<span className="text-blue-400 font-bold">•</span>
 Responsive Tailwind Layouts
 </li>
 <li className="flex items-start gap-2">
-<span className="text-blue-600 font-bold">•</span>
+<span className="text-blue-400 font-bold">•</span>
 API & Database Integration
 </li>
 </ul>
@@ -217,47 +231,47 @@ API & Database Integration
 </div>
 </section>
 {/* --- Volunteering & Community Impact Section --- */}
-<section className="max-w-6xl mx-auto px-10 py-24 bg-slate-50 rounded-3xl mt-12">
+<section className="max-w-6xl mx-auto px-10 py-24 relative">
   <div className="flex flex-col md:flex-row justify-between items-start gap-12">
     <div className="md:w-1/3">
-      <h2 className="text-3xl font-bold text-slate-900 mb-4">Volunteering & Community Impact</h2>
-      <p className="text-slate-600 leading-relaxed">
+      <h2 className="text-3xl font-bold text-white mb-4">Volunteering & Open Source Contributions</h2>
+      <p className="text-gray-400 leading-relaxed">
         Dedicated to giving back through design system engineering, community coordination, and STEM education initiatives.
       </p>
     </div>
 
     <div className="md:w-2/3 grid gap-8">
       {/* Role 1: DevLaunchers */}
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+      <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-6 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex gap-6 items-start">
         <div className="text-3xl">⚙️</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">Design System Engineer (Volunteer)</h3>
-          <p className="text-blue-600 font-bold text-sm mb-2">DevLaunchers</p>
-          <p className="text-slate-500 text-sm">
+          <h3 className="text-xl font-bold text-white">Design System Engineer (Volunteer)</h3>
+          <p className="text-blue-400 font-bold text-sm mb-2">DevLaunchers</p>
+          <p className="text-gray-400 text-sm">
             Architecting modular, production-ready design token assets and highly accessible React components. Partnering with multi-functional open-source dev layers to maintain design continuity across global contributor pipelines.
           </p>
         </div>
       </div>
 
       {/* Role 2: Thokam */}
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+      <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-6 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex gap-6 items-start">
         <div className="text-3xl">🤝</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">Volunteer Coordinator</h3>
-          <p className="text-green-600 font-bold text-sm mb-2">Thokam</p>
-          <p className="text-slate-500 text-sm">
+          <h3 className="text-xl font-bold text-white">Volunteer Coordinator</h3>
+          <p className="text-green-400 font-bold text-sm mb-2">Thokam</p>
+          <p className="text-gray-400 text-sm">
             Managed community outreach pipelines, structured event logistics, and coordinated local volunteer efforts to drive operational impact.
           </p>
         </div>
       </div>
 
       {/* Role 3: Bright Mind Enrichment Schools */}
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+      <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-6 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex gap-6 items-start">
         <div className="text-3xl">🎓</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">STEM Enrichment Volunteer</h3>
-          <p className="text-purple-600 font-bold text-sm mb-2">Bright Mind Enrichment Schools</p>
-          <p className="text-slate-500 text-sm">
+          <h3 className="text-xl font-bold text-white">STEM Enrichment Volunteer</h3>
+          <p className="text-purple-400 font-bold text-sm mb-2">Bright Mind Enrichment Schools</p>
+          <p className="text-gray-400 text-sm">
             Facilitated educational learning pathways and interactive engineering exercises for students, fostering early curiosity in technical fields.
           </p>
         </div>
@@ -267,59 +281,59 @@ API & Database Integration
 </section>
 
 {/* --- Education & Professional Credentials Section --- */}
-<section className="max-w-6xl mx-auto px-10 py-24 bg-white rounded-3xl mt-12 border border-slate-200">
+<section className="max-w-6xl mx-auto px-10 py-24 relative">
   <div className="flex flex-col md:flex-row justify-between items-start gap-12">
     <div className="md:w-1/3">
-      <h2 className="text-3xl font-bold text-slate-900 mb-4">Education & Professional Credentials</h2>
-      <p className="text-slate-600 leading-relaxed">
+      <h2 className="text-3xl font-bold text-white mb-4">Education & Professional Credentials</h2>
+      <p className="text-gray-400 leading-relaxed">
         Comprehensive training in AI development, full-stack engineering, and advanced computer science methodologies.
       </p>
     </div>
 
     <div className="md:w-2/3 grid gap-8">
       {/* Credential 1: Per Scholas AI */}
-      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+      <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-6 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex gap-6 items-start">
         <div className="text-3xl">🤖</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">AI Solution Developer Professional Certification</h3>
-          <p className="text-indigo-600 font-bold text-sm mb-2">Per Scholas</p>
-          <p className="text-slate-500 text-sm">
+          <h3 className="text-xl font-bold text-white">AI Solution Developer Professional Certification</h3>
+          <p className="text-indigo-400 font-bold text-sm mb-2">Per Scholas</p>
+          <p className="text-gray-400 text-sm">
             Intensive training program focused on building end-to-end AI applications, model orchestration, and backend framework architectures.
           </p>
         </div>
       </div>
 
       {/* Credential 2: Heiwa */}
-      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+      <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-6 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex gap-6 items-start">
         <div className="text-3xl">🎨</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">AI/UX Product Design Fellow</h3>
-          <p className="text-pink-600 font-bold text-sm mb-2">Heiwa (AI/UX PM Accelerator)</p>
-          <p className="text-slate-500 text-sm">
+          <h3 className="text-xl font-bold text-white">AI/UX Product Design Fellow</h3>
+          <p className="text-pink-400 font-bold text-sm mb-2">Heiwa (AI/UX PM Accelerator)</p>
+          <p className="text-gray-400 text-sm">
             Selected for an intensive accelerator building 'Warm Tech'. Led end-to-end design and technical feature specs for an AI family platform. Built a 5-screen, COPPA-compliant onboarding flow, integrated privacy consent gates, implemented Confidence Indicators, and authored technical specifications for tiered model structures (Fast/Balanced/Deep models) utilizing a Soft Indigo & Warm Peach system.
           </p>
         </div>
       </div>
 
       {/* Credential 3: Per Scholas Java */}
-      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+      <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-6 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex gap-6 items-start">
         <div className="text-3xl">☕</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">Full Stack Java Developer Certification</h3>
-          <p className="text-orange-600 font-bold text-sm mb-2">Per Scholas</p>
-          <p className="text-slate-500 text-sm">
+          <h3 className="text-xl font-bold text-white">Full Stack Java Developer Certification</h3>
+          <p className="text-orange-400 font-bold text-sm mb-2">Per Scholas</p>
+          <p className="text-gray-400 text-sm">
             Rigorous software engineering track specializing in enterprise Java ecosystems, Spring Boot architectures, relational databases, and full-stack integration patterns.
           </p>
         </div>
       </div>
 
       {/* Credential 4: MSCS */}
-      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
+      <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-6 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex gap-6 items-start">
         <div className="text-3xl">🎓</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">Master of Science in Computer Science (MSCS)</h3>
-          <p className="text-slate-600 font-bold text-sm mb-2">Graduate Degree</p>
-          <p className="text-slate-500 text-sm">
+          <h3 className="text-xl font-bold text-white">Master of Science in Computer Science (MSCS)</h3>
+          <p className="text-gray-300 font-bold text-sm mb-2">Graduate Degree</p>
+          <p className="text-gray-400 text-sm">
             Advanced graduate coursework detailing software engineering methodologies, database architectures, and computational systems logic.
           </p>
         </div>
@@ -330,26 +344,26 @@ API & Database Integration
 {/* --- Hire Me / CTA Section --- */}
 
 <div className="mt-12 text-center">
-<Link href="/projects" className="inline-flex items-center px-8 py-3 border-2 border-indigo-600 text-indigo-600 font-bold rounded-full hover:bg-indigo-600 hover:text-white transition-all">
+<Link href="/projects" className="inline-flex items-center px-8 py-3 border-2 border-purple-500/30 text-purple-300 font-bold rounded-full hover:bg-purple-500/20 transition-all ease-in-out duration-300">
 View All My Work <span className="ml-2">→</span>
 </Link>
 </div>
 
 
-<section className="bg-indigo-600 py-20 px-6 text-center text-white mt-20 rounded-t-3xl">
+<section className="bg-purple-600/10 border border-purple-500/20 py-20 px-6 text-center text-white mt-20 rounded-t-3xl backdrop-blur-sm">
 <div className="max-w-3xl mx-auto">
   
 <h2 className="text-4xl md:text-5xl font-bold mb-6">
 Let’s build something incredible together.
 </h2>
-<p className="text-xl mb-10 opacity-90">
+<p className="text-xl mb-10 text-gray-300">
 I’m currently looking for new opportunities in UI/UX Design and Full-Stack Development.
 Whether you have a project in mind or just want to connect, I'd love to hear from you.
 </p>
 <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
 <button
 onClick={copyEmail}
-className={`px-10 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 shadow-lg min-w-[220px] ${copied ? 'bg-green-500 text-white' : 'bg-white text-indigo-600'}`}
+className={`px-10 py-4 rounded-full font-bold text-lg transition-all ease-in-out duration-300 hover:shadow-xl hover:-translate-y-1 active:scale-95 shadow-[0_4px_30px_rgba(0,0,0,0.2)] min-w-[220px] ${copied ? 'bg-green-500 text-white' : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'}`}
 >
 {copied ? "✓ Email Copied!" : "Hire Me Now"}
 </button>
@@ -357,7 +371,7 @@ className={`px-10 py-4 rounded-full font-bold text-lg transition-all hover:shado
 href="https://www.linkedin.com/in/kavitha-mynala12"
 target="_blank"
 rel="noopener noreferrer"
-className="border-2 border-white/40 hover:border-white px-10 py-4 rounded-full font-bold text-lg transition-all"
+className="border-2 border-white/20 hover:border-white/40 px-10 py-4 rounded-full font-bold text-lg transition-all ease-in-out duration-300"
 >
 View LinkedIn
 </a>
@@ -368,14 +382,14 @@ View LinkedIn
 
 {/* --- Simple Footer --- */}
 
-<footer className="bg-white py-12 px-6 border-t border-gray-100">
-<div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500">
+<footer className="bg-white/[0.02] border-t border-white/[0.05] py-12 px-6">
+<div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-gray-400">
 <p className="font-medium">
 © {new Date().getFullYear()} Kavitha Mynala. All rights reserved.
 </p>
 <div className="flex gap-8 font-semibold">
-<a href="https://github.com/kavitha0507" className="hover:text-black transition-colors">GitHub</a>
-<a href="https://www.linkedin.com/in/kavitha-mynala12" className="hover:text-indigo-600 transition-colors">LinkedIn</a>
+<a href="https://github.com/kavitha0507" className="hover:text-white transition-colors">GitHub</a>
+<a href="https://www.linkedin.com/in/kavitha-mynala12" className="hover:text-purple-400 transition-colors">LinkedIn</a>
 </div>
 </div>
 </footer>

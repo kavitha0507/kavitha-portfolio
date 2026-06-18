@@ -53,24 +53,37 @@ export default function ProjectsPage() {
     ? projects 
     : projects.filter(p => p.category === filter);
 
+  const colorThemes: Record<string, string> = {
+    'AI & Development': 'border-indigo-500/30 bg-indigo-500/10 text-indigo-300',
+    'Full-Stack Development': 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300',
+    'Computer Vision': 'border-amber-500/30 bg-amber-500/10 text-amber-300',
+    'Web Development': 'border-purple-500/30 bg-purple-500/10 text-purple-300'
+  };
+
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-slate-900 p-10 pt-32">
-      <div className="max-w-6xl mx-auto">
+    <main className="min-h-screen bg-[#0B0F19] text-gray-100 selection:bg-purple-500/30 p-10 pt-32 relative">
+      {/* Glow Elements */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-indigo-600/10 to-purple-600/10 blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-bl from-purple-600/10 to-indigo-600/10 blur-3xl"></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
         <header className="mb-12">
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Featured Work</h1>
-          <p className="text-lg text-slate-600 dark:text-slate-400">A collection of full-stack development and user-centered design projects.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Featured Work</h1>
+          <p className="text-lg text-gray-400">A collection of full-stack development and user-centered design projects.</p>
         </header>
 
         {/* Filter Tabs */}
-        <div className="flex gap-4 mb-10 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div className="flex gap-4 mb-10 border-b border-white/[0.05] pb-4">
           {['All', 'AI & Development', 'Full-Stack Development', 'Computer Vision', 'Web Development'].map((tab) => (
             <button
               key={tab}
               onClick={() => setFilter(tab)}
-              className={`px-4 py-2 rounded-md font-medium transition-all ${
+              className={`px-4 py-2 rounded-md font-medium transition-all ease-in-out duration-300 ${
                 filter === tab 
-                ? 'bg-blue-600 text-white shadow-lg' 
-                : 'text-slate-600 hover:bg-slate-200 dark:hover:bg-slate-800'
+                ? 'bg-purple-500/20 border border-purple-500/30 text-purple-300 shadow-[0_4px_30px_rgba(0,0,0,0.2)]' 
+                : 'text-gray-400 hover:bg-white/[0.02] hover:text-white'
               }`}
             >
               {tab}
@@ -80,33 +93,36 @@ export default function ProjectsPage() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project, index) => {
+            const theme = colorThemes[project.category] || 'border-purple-500/30 bg-purple-500/10 text-purple-300';
+            
+            return (
             <div 
               key={index}
-              className="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-xl transition-all"
+              className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]"
             >
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded">
+                  <span className={`text-xs font-bold uppercase tracking-widest px-2 py-1 rounded border ${theme}`}>
                     {project.category}
                   </span>
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-purple-400 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">
+                <p className="text-sm font-semibold text-purple-400 mb-4">
                   {project.role}
                 </p>
                 
-                <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                <p className="text-gray-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map(tag => (
-                    <span key={tag} className="text-xs font-medium bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                    <span key={tag} className={`text-xs font-medium px-3 py-1 rounded-full border ${theme}`}>
                       {tag}
                     </span>
                   ))}
@@ -114,13 +130,13 @@ export default function ProjectsPage() {
 
                 <Link 
                   href={project.link}
-                  className="font-bold text-slate-900 dark:text-white border-b-2 border-blue-500 pb-1 hover:text-blue-500 transition-all"
+                  className="font-bold text-white border-b-2 border-purple-500/30 pb-1 hover:text-purple-400 hover:border-purple-400 transition-all ease-in-out duration-300"
                 >
                   View Case Study →
                 </Link>
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </main>
