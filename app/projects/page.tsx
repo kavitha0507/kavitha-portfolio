@@ -29,8 +29,7 @@ export default function ProjectsPage() {
       category: "Full-Stack Development",
       tags: ["Mobile Development", "Healthcare UX", "State Management"],
       description: "Designed and built a critical patient-adherence tool providing scheduled notifications, prescription logging, and cross-device safety alarms.",
-      link: "/projects/medication-reminder",
-      images: ["/med-reminder-1.png", "/med-reminder-2.png"]
+      link: "/projects/medication-reminder"
     },
     {
       title: "Convert Image to Pencil Sketch",
