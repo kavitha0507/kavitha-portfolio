@@ -7,8 +7,11 @@ import { title } from "process";
 
 interface Project {
   title: string;
+  role: string;
   description: string;
   tags: string[];
+  type: string;
+  link: string;
 }
 
 export default function Home() {
@@ -17,40 +20,29 @@ export default function Home() {
 
   const projects = [
   {
-    title: "Plant Diagnosis App",
-    description: "AI-powered mobile solution for plant owners to diagnose health issues instantly using AI-powered scanning.",
-    tags: ["Figma", "AI/ML", "Google UX Certificate"],
-    type: "UI/UX Design",
-    link: "/projects/plant-diagnosis" // Path to your new folder
+    title: "MediSync AI",
+    role: "AI Solution Developer & UI/UX Engineer",
+    description: "An intelligent, privacy-conscious health assistant utilizing an localized FastAPI router and LangChain context orchestration. Engineered client-side regex metrics parsing and accessibility-first color bands to turn complex AI inference into trusted visual health insights.",
+    tags: ["React & FastAPI", "LangChain Orchestration", "Groq AI / Llama 3.3", "SQLite Architecture"],
+    type: "AI & Development",
+    link: "/projects/medisync-ai"
   },
   {
-    title: "Medication Reminder App",
-    description: "A high-accessibility design focused on WCAG-compliant contrast and simplified navigation for elderly patients.",
-    tags: ["Accessibility", "WCAG", "Healthcare"],
-    type: "UI/UX Design",
-    link: "/projects/medication-reminder" // Path to your new folder
+    title: "Heiwa AI Platform",
+    role: "AI/UX Product Design Fellow",
+    description: "Led end-to-end product design and technical feature scoping for Heiwa, an AI-powered family organization ecosystem. Architected COPPA-compliant onboarding patterns, confidence indicators, and multi-tier model specs.",
+    tags: ["Product Design", "Warm Tech System", "COPPA Trust-by-Design", "Model Tier Specs"],
+    type: "Product Design",
+    link: "/projects/heiwa-ai"
   },
   {
-    title: "Full-Stack Portfolio Platform",
-    description: "A professional portfolio system featuring a React frontend and Java Spring Boot backend, implementing full CRUD operations for project management.",
-    tags: ["Java", "Spring Boot", "React", "Tailwind"],
-    type: "Engineering",
-    link: "/projects/portfolio-system" // Path to your development project page
-  },
-  {
-    title: "Chess Coaching Platform",
-    description: "Developed a full-stack coaching site using Next.js and Tailwind CSS, featuring responsive lesson management.",
-    tags: ["Next.js", "Tailwind CSS", "Full-Stack"],
-    type: "Engineering",
-    link: "/projects/chess-coaching"
-  },
-{
-  title: "Professional Brand Platform",
-  description: "A high-performance portfolio developed to showcase UI/UX case studies and technical expertise.",
-  tags: ["Next.js", "Tailwind CSS", "Vercel", "Figma"],
-  type: "Web Development / UX Design",
-  link: "/" // Since it's the current site
-}
+    title: "DevLaunchers Open Source Platform",
+    role: "Design System Engineer (Volunteer)",
+    description: "Spearheading the engineering and architectural scaling of the unified open-source design system, bridging the divide between high-fidelity component layouts and production-ready code tokens.",
+    tags: ["Design Tokens", "React Components", "Component Scalability", "Open Source Engineering"],
+    type: "Open Source",
+    link: "/projects/devlaunchers"
+  }
 ];
 
   const copyEmail = () => {
@@ -90,18 +82,18 @@ Design that <br />
 </h1>
 
 <p className="mt-8 text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
-I am Kavitha. I bridge the gap between User Experience and Technical Implementation,
-creating interfaces that are as beautiful as they are functional.
+I am Kavitha. I specialize in bridging the gap between complex Agentic AI systems and intuitive User Experiences. I design and develop trusted, human-in-the-loop interfaces that transform raw AI capabilities into market-ready enterprise solutions.
 </p>
 
 {/* NEW SKILLS TAGS */}
 
 <div className="mt-10 flex flex-wrap justify-center gap-3">
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">User Research</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Wireframing</span>
+<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Agentic Workflows</span>
+<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Human-in-the-Loop UX</span>
+<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Next.js / React</span>
 <span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Figma</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">Prototyping</span>
-<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">React/Next.js</span>
+<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">AI Architecture</span>
+<span className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-semibold shadow-sm text-slate-700">LLM Context Mapping</span>
 </div>
 </section>
 
@@ -116,6 +108,7 @@ creating interfaces that are as beautiful as they are functional.
     >
       {/* project content */}
       <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+      <p className="text-sm font-semibold text-slate-500 mb-2">{project.role}</p>
       <p className="text-slate-500 mb-4">{project.description}</p>
       <div className="flex flex-wrap gap-2">
         {project.tags.map((tag, i) => (
@@ -207,53 +200,49 @@ API & Database Integration
 
 </div>
 </section>
-{/* --- Volunteer Experience Section --- */}
+{/* --- Professional & Enterprise Experience Section --- */}
 <section className="max-w-6xl mx-auto px-10 py-24 bg-slate-50 rounded-3xl mt-12">
   <div className="flex flex-col md:flex-row justify-between items-start gap-12">
     <div className="md:w-1/3">
-      <h2 className="text-3xl font-bold text-slate-900 mb-4">Impact & Volunteering</h2>
+      <h2 className="text-3xl font-bold text-slate-900 mb-4">Professional & Enterprise Experience</h2>
       <p className="text-slate-600 leading-relaxed">
-        I am currently volunteering as a Designer for two NGO organizations, 
-        using my skills to support education and mental health initiatives.
+        Leading AI product design and engineering initiatives across healthcare, family organization, and open-source design systems.
       </p>
     </div>
 
     <div className="md:w-2/3 grid gap-8">
-      {/* NGO 1: Bright Minds Enrichment */}
+      {/* Role 1: MediSync AI */}
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
-        <div className="text-3xl">🎓</div>
+        <div className="text-3xl">�</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">Bright Minds Enrichment</h3>
-          <p className="text-purple-600 font-bold text-sm mb-2">Volunteer Designer</p>
+          <h3 className="text-xl font-bold text-slate-900">MediSync AI</h3>
+          <p className="text-purple-600 font-bold text-sm mb-2">AI Solution Developer</p>
           <p className="text-slate-500 text-sm">
-            Enhancing digital tools for schools to improve student engagement and 
-            streamline educational resources for teachers.
+            Conceptualized and engineered an end-to-end full-stack medical consulting companion. Built custom state-management flows across decoupled endpoints (/bmi, /diet, /advise) to map raw LLM execution smoothly onto predictable user experience patterns.
           </p>
         </div>
       </div>
 
-      {/* NGO 2: Thokam Mental Health */}
+      {/* Role 2: Heiwa */}
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
-        <div className="text-3xl">🧠</div>
+        <div className="text-3xl">🎨</div>
         <div>
-          <h3 className="text-xl font-bold text-slate-900">Thokam Mental Health</h3>
-          <p className="text-pink-600 font-bold text-sm mb-2">UX Design Volunteer</p>
+          <h3 className="text-xl font-bold text-slate-900">Heiwa (AI/UX PM Accelerator)</h3>
+          <p className="text-pink-600 font-bold text-sm mb-2">AI/UX Product Design Fellow</p>
           <p className="text-slate-500 text-sm">
-            Modernizing an empathetic platform for emotional well-being, focusing on 
-            reducing cognitive load and improving accessibility for mental health tracking.
+            Led end-to-end product design and feature specification for a family organization platform. Designed a 5-screen, COPPA-compliant onboarding flow integrated with mandatory data privacy consent gates. Implemented Confidence Indicators and human-in-the-loop UX patterns for automated event extraction. Authored technical specifications mapping out a tiered AI model hierarchy (Fast/Balanced/Deep models) to target a sub-90-second time-to-value for new users using a Warm Tech (Soft Indigo & Warm Peach) design system.
           </p>
         </div>
       </div>
-    </div>
-  </div>
-  {/* NGO 3: DevLaunchers */}
+
+      {/* Role 3: DevLaunchers */}
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-start">
         <div className="text-3xl">⚙️</div>
         <div>
           <h3 className="text-xl font-bold text-slate-900">DevLaunchers</h3>
-          <p className="text-blue-600 font-bold text-sm mb-2">Design System Engineer</p>
+          <p className="text-blue-600 font-bold text-sm mb-2">Design System Engineer (Volunteer)</p>
           <p className="text-slate-500 text-sm">
-            Contributing to the development and maintenance of scalable design systems, bridging the gap between design tokens and component implementation.
+            Architecting modular, production-ready design token assets and highly accessible React components. Partnering with multi-functional open-source dev layers to maintain design continuity across global contributor pipelines.
           </p>
         </div>
       </div>

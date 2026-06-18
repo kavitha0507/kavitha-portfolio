@@ -8,32 +8,28 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      title: "Portfolio Website",
-      category: "Development",
-      tags: ["Java", "SpringBoot", "SQL", "Tailwind"],
-      description: "A full-stack portfolio implementing CRUD operations to manage project data dynamically via a SQL database.",
-      link: "/projects/portfolio-v1"
+      title: "MediSync AI",
+      role: "AI Solution Developer & UI/UX Engineer",
+      category: "AI & Development",
+      tags: ["React & FastAPI", "LangChain Orchestration", "Groq AI / Llama 3.3", "SQLite Architecture"],
+      description: "An intelligent, privacy-conscious health assistant utilizing an localized FastAPI router and LangChain context orchestration. Engineered client-side regex metrics parsing and accessibility-first color bands to turn complex AI inference into trusted visual health insights.",
+      link: "/projects/medisync-ai"
     },
     {
-      title: "Plant Diagnosis App",
-      category: "UI/UX",
-      tags: ["Figma", "User Research", "Prototyping"],
-      description: "A mobile-first design solution focused on helping users identify plant diseases through an intuitive camera interface.",
-      link: "/projects/plant-diagnosis"
+      title: "Heiwa AI Platform",
+      role: "AI/UX Product Design Fellow",
+      category: "Product Design",
+      tags: ["Product Design", "Warm Tech System", "COPPA Trust-by-Design", "Model Tier Specs"],
+      description: "Led end-to-end product design and technical feature scoping for Heiwa, an AI-powered family organization ecosystem. Architected COPPA-compliant onboarding patterns, confidence indicators, and multi-tier model specs.",
+      link: "/projects/heiwa-ai"
     },
     {
-      title: "Medication Reminder",
-      category: "UI/UX",
-      tags: ["Google UX Certificate", "Accessibility", "Mobile Design"],
-      description: "A healthcare-focused UI design emphasizing high accessibility and clear notification systems for elderly users.",
-      link: "/projects/medication-reminder"
-    },
-    {
-      title: "Image to Pencil Sketch",
-      category: "Development",
-      tags: ["Python", "OpenCV", "Image Processing"],
-      description: "A technical script that utilizes computer vision libraries to transform real-world images into stylized pencil sketches.",
-      link: "/projects/image-to-sketch"
+      title: "DevLaunchers Open Source Platform",
+      role: "Design System Engineer (Volunteer)",
+      category: "Open Source",
+      tags: ["Design Tokens", "React Components", "Component Scalability", "Open Source Engineering"],
+      description: "Spearheading the engineering and architectural scaling of the unified open-source design system, bridging the divide between high-fidelity component layouts and production-ready code tokens.",
+      link: "/projects/devlaunchers"
     }
   ];
 
@@ -51,7 +47,7 @@ export default function ProjectsPage() {
 
         {/* Filter Tabs */}
         <div className="flex gap-4 mb-10 border-b border-slate-200 dark:border-slate-800 pb-4">
-          {['All', 'Development', 'UI/UX'].map((tab) => (
+          {['All', 'AI & Development', 'Product Design', 'Open Source'].map((tab) => (
             <button
               key={tab}
               onClick={() => setFilter(tab)}
@@ -80,9 +76,13 @@ export default function ProjectsPage() {
                   </span>
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h3>
+                
+                <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">
+                  {project.role}
+                </p>
                 
                 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                   {project.description}
