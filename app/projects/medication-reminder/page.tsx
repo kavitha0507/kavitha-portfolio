@@ -50,13 +50,24 @@ export default function MedicationReminder() {
   <p className="text-lg">Following the Google UX methodology, I created user personas for retirees and performed usability testing to refine the notification system.</p>
         
   {/* REPLACE THE DASHED BOX WITH THIS: */}
-  <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-slate-200">
-    <Image 
-      src="/images/med-reminder-mockup.png" // Replace with your actual filename
-      alt="High-fidelity mockup of the Medication Reminder App showing the daily schedule and large notification buttons"
-      fill
-      className="object-cover"
-    />
+  <div className="relative w-full h-48 bg-gradient-to-br from-blue-600/10 to-indigo-600/20 rounded-t-2xl flex items-center justify-center overflow-hidden border-b border-white/5 dynamic-card-glow">
+    {/* Blurred neon background accent ring */}
+    <div className="absolute w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
+    
+    {/* Premium medical icon */}
+    <div className="relative z-10 flex flex-col items-center">
+      <svg className="text-blue-400 w-12 h-12 stroke-[1.5] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        <circle cx="12" cy="12" r="4"/>
+      </svg>
+      
+      {/* Mini dashboard mock row */}
+      <div className="flex gap-1 absolute bottom-3 left-3 right-3">
+        <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">8:00 AM</div>
+        <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">Reminder Active</div>
+        <div className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-[10px] text-blue-300">Adherence: 98%</div>
+      </div>
+    </div>
   </div>
 </div>
 {/* Key Design Features Section */}
