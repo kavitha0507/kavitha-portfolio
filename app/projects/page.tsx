@@ -12,24 +12,40 @@ export default function ProjectsPage() {
       role: "AI Solution Developer & UI/UX Engineer",
       category: "AI & Development",
       tags: ["React & FastAPI", "LangChain Orchestration", "Groq AI / Llama 3.3", "SQLite Architecture"],
-      description: "An intelligent, privacy-conscious health assistant utilizing an localized FastAPI router and LangChain context orchestration. Engineered client-side regex metrics parsing and accessibility-first color bands to turn complex AI inference into trusted visual health insights.",
+      description: "An intelligent, privacy-conscious health assistant utilizing a localized FastAPI router and LangChain context orchestration. Engineered client-side regex metrics parsing and accessibility-first color bands to turn complex AI inference into trusted visual health insights.",
       link: "/projects/medisync-ai"
     },
     {
-      title: "Heiwa AI Platform",
-      role: "AI/UX Product Design Fellow",
-      category: "Product Design",
-      tags: ["Product Design", "Warm Tech System", "COPPA Trust-by-Design", "Model Tier Specs"],
-      description: "Led end-to-end product design and technical feature scoping for Heiwa, an AI-powered family organization ecosystem. Architected COPPA-compliant onboarding patterns, confidence indicators, and multi-tier model specs.",
-      link: "/projects/heiwa-ai"
+      title: "Plant Health Diagnosis App",
+      role: "Full-Stack Developer & UI/UX Designer",
+      category: "Full-Stack Development",
+      tags: ["React Mobile", "UI/UX Design", "Image Processing"],
+      description: "An intuitive application allowing users to upload botanical images to receive immediate crop health diagnostics and localized treatment parameters.",
+      link: "/projects/plant-diagnosis"
     },
     {
-      title: "DevLaunchers Open Source Platform",
-      role: "Design System Engineer (Volunteer)",
-      category: "Open Source",
-      tags: ["Design Tokens", "React Components", "Component Scalability", "Open Source Engineering"],
-      description: "Spearheading the engineering and architectural scaling of the unified open-source design system, bridging the divide between high-fidelity component layouts and production-ready code tokens.",
-      link: "/projects/devlaunchers"
+      title: "Medication Reminder App",
+      role: "Full-Stack Developer & UI/UX Designer",
+      category: "Full-Stack Development",
+      tags: ["Mobile Development", "Healthcare UX", "State Management"],
+      description: "Designed and built a critical patient-adherence tool providing scheduled notifications, prescription logging, and cross-device safety alarms.",
+      link: "/projects/medication-reminder"
+    },
+    {
+      title: "Convert Image to Pencil Sketch",
+      role: "Python Engineer",
+      category: "Computer Vision",
+      tags: ["Python", "OpenCV", "Computer Vision"],
+      description: "Engineered a local computer vision script leveraging OpenCV and image matrix transformations to cleanly parse and render raw photos into high-fidelity pencil sketches.",
+      link: "/projects/image-to-sketch"
+    },
+    {
+      title: "Developer Portfolio Website",
+      role: "Full-Stack Engineer",
+      category: "Web Development",
+      tags: ["Next.js", "Tailwind CSS", "Vercel Deploy"],
+      description: "Designed and developed this modern, responsive portfolio space to showcase live engineering milestones and system architecture breakdowns.",
+      link: "/projects/portfolio-v1"
     }
   ];
 
@@ -47,7 +63,7 @@ export default function ProjectsPage() {
 
         {/* Filter Tabs */}
         <div className="flex gap-4 mb-10 border-b border-slate-200 dark:border-slate-800 pb-4">
-          {['All', 'AI & Development', 'Product Design', 'Open Source'].map((tab) => (
+          {['All', 'AI & Development', 'Full-Stack Development', 'Computer Vision', 'Web Development'].map((tab) => (
             <button
               key={tab}
               onClick={() => setFilter(tab)}
