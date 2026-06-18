@@ -29,7 +29,8 @@ export default function ProjectsPage() {
       category: "Full-Stack Development",
       tags: ["Mobile Development", "Healthcare UX", "State Management"],
       description: "Designed and built a critical patient-adherence tool providing scheduled notifications, prescription logging, and cross-device safety alarms.",
-      link: "/projects/medication-reminder"
+      link: "/projects/medication-reminder",
+      images: ["/med-reminder-1.png", "/med-reminder-2.png"]
     },
     {
       title: "Convert Image to Pencil Sketch",
@@ -101,6 +102,20 @@ export default function ProjectsPage() {
               key={index}
               className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]"
             >
+              {project.images && project.images.length > 0 && (
+                <div className="relative w-full h-52 bg-gradient-to-br from-blue-950/40 to-indigo-950/40 rounded-t-2xl flex items-center justify-center gap-4 overflow-hidden border-b border-white/5 p-4">
+                  <img 
+                    src={project.images[0]} 
+                    alt={`${project.title} - Screen 1`}
+                    className="w-[42%] h-full object-cover rounded-xl border border-white/10 shadow-2xl transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300"
+                  />
+                  <img 
+                    src={project.images[1]} 
+                    alt={`${project.title} - Screen 2`}
+                    className="w-[42%] h-full object-cover rounded-xl border border-white/10 shadow-2xl transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300"
+                  />
+                </div>
+              )}
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <span className={`text-xs font-bold uppercase tracking-widest px-2 py-1 rounded border ${theme}`}>
