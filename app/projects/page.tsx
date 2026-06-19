@@ -99,56 +99,40 @@ export default function ProjectsPage() {
             return (
             <div 
               key={index}
-              className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]"
+              className="group bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-2xl p-8 hover:border-purple-500/30 transition-all ease-in-out duration-300 hover:-translate-y-1 shadow-[0_4px_30px_rgba(0,0,0,0.2)]"
             >
-              {project.images && project.images.length > 0 && (
-                <div className="relative w-full h-52 bg-gradient-to-br from-blue-950/40 to-indigo-950/40 rounded-t-2xl flex items-center justify-center gap-4 overflow-hidden border-b border-white/5 p-4">
-                  <img 
-                    src={project.images[0]} 
-                    alt={`${project.title} - Screen 1`}
-                    className="w-[42%] h-full object-cover rounded-xl border border-white/10 shadow-2xl transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300"
-                  />
-                  <img 
-                    src={project.images[1]} 
-                    alt={`${project.title} - Screen 2`}
-                    className="w-[42%] h-full object-cover rounded-xl border border-white/10 shadow-2xl transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300"
-                  />
-                </div>
-              )}
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-4">
-                  <span className={`text-xs font-bold uppercase tracking-widest px-2 py-1 rounded border ${theme}`}>
-                    {project.category}
-                  </span>
-                </div>
-                
-                <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-purple-400 transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-sm font-semibold text-purple-400 mb-4">
-                  {project.role}
-                </p>
-                
-                <p className="text-gray-400 mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tags.map(tag => (
-                    <span key={tag} className={`text-xs font-medium px-3 py-1 rounded-full border ${theme}`}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <Link 
-                  href={project.link}
-                  className="font-bold text-white border-b-2 border-purple-500/30 pb-1 hover:text-purple-400 hover:border-purple-400 transition-all ease-in-out duration-300"
-                >
-                  View Case Study →
-                </Link>
+              <div className="flex justify-between items-start mb-4">
+                <span className={`text-xs font-bold uppercase tracking-widest px-2 py-1 rounded border ${theme}`}>
+                  {project.category}
+                </span>
               </div>
+              
+              <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-purple-400 transition-colors">
+                {project.title}
+              </h3>
+              
+              <p className="text-sm font-semibold text-purple-400 mb-4">
+                {project.role}
+              </p>
+              
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                {project.tags.map(tag => (
+                  <span key={tag} className={`text-xs font-medium px-3 py-1 rounded-full border ${theme}`}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <Link 
+                href={project.link}
+                className="font-bold text-white border-b-2 border-purple-500/30 pb-1 hover:text-purple-400 hover:border-purple-400 transition-all ease-in-out duration-300"
+              >
+                View Case Study →
+              </Link>
             </div>
           )})}
         </div>
