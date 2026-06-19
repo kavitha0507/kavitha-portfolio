@@ -66,7 +66,7 @@ export default function MedicationReminder() {
     
     <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-slate-200">
       <Image 
-        src="/images/mockups.png"
+        src="/images/medication_lofi.png"
         alt="Low-fidelity prototype of the Medication Reminder App user flow"
         fill
         className="object-contain"
@@ -83,7 +83,7 @@ export default function MedicationReminder() {
     
     <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-slate-200">
       <Image 
-        src="/images/main-img.png"
+        src="/images/medication_hifi.png"
         alt="High-fidelity prototype of the Medication Reminder App showing the daily schedule and large notification buttons"
         fill
         className="object-contain"
