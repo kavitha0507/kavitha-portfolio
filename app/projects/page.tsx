@@ -32,11 +32,11 @@ export default function ProjectsPage() {
       link: "/projects/medication-reminder"
     },
     {
-      title: "Convert Image to Pencil Sketch",
-      role: "Python Engineer",
+      title: "Computer Vision Image-to-Sketch Pipeline",
+      role: "Python Engineer & Developer",
       category: "Computer Vision",
-      tags: ["Python", "OpenCV", "Computer Vision"],
-      description: "Engineered a local computer vision script leveraging OpenCV and image matrix transformations to cleanly parse and render raw photos into high-fidelity pencil sketches.",
+      tags: ["Python 3.x", "OpenCV (cv2)", "NumPy Matrices", "Computer Vision"],
+      description: "Engineered an automated digital image processing script leveraging OpenCV and optimized NumPy matrix transformations. Synthesizes raw photographs into crisp, analog-style pencil graphite sketches by executing perceptual grayscale conversion, Gaussian kernel noise mitigation, and high-speed bitwise array division.",
       link: "/projects/image-to-sketch"
     },
     {
