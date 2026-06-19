@@ -52,10 +52,10 @@ export default function Home() {
     link: "/projects/image-to-sketch"
   },
   {
-    title: "Developer Portfolio Website",
-    role: "Full-Stack Engineer",
-    description: "Designed and developed this modern, responsive portfolio space to showcase live engineering milestones and system architecture breakdowns.",
-    tags: ["Next.js", "Tailwind CSS", "Vercel Deploy"],
+    title: "Enterprise Spring Boot Portfolio Platform",
+    role: "Full-Stack Software Engineer",
+    description: "Architected a data-driven portfolio management system utilizing Java, Spring Boot, and Hibernate ORM. Implemented an object-oriented Model-View-Controller (MVC) pipeline, separating structural relational schemas from presentation fragments while integrating secure administrative data synchronization.",
+    tags: ["Java", "Spring Boot", "Hibernate/JPA", "SQL Database"],
     type: "Web Development",
     link: "/projects/portfolio-v1"
   }
